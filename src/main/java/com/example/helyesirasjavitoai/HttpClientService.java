@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 public class HttpClientService {
-    private static final URI CHAT_COMPLETIONS_URI = URI.create("https://api.groq.com/openai/v1/chat/completions");
+    private static final URI CHAT_COMPLETIONS_URI = URI.create("https://openrouter.ai/api/v1/chat/completions");
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     private final HttpClient httpClient;
@@ -24,7 +24,7 @@ public class HttpClientService {
     private final String model;
 
     public HttpClientService(String apiKey) {
-        this(apiKey, "openai/gpt-oss-20b");
+        this(apiKey, "google/gemma-4-26b-a4b-it:free");
     }
 
     public HttpClientService(String apiKey, String model) {

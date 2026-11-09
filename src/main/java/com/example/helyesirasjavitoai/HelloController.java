@@ -10,7 +10,7 @@ import javafx.scene.control.TextArea;
 import java.util.concurrent.CompletionException;
 
 public class HelloController {
-    private final HttpClientService httpClientService = new HttpClientService(System.getenv("GROQ_API_KEY"));
+    private final HttpClientService httpClientService = new HttpClientService(System.getenv("APIKEY"));
 
 
     private TextArea inputTextArea;
